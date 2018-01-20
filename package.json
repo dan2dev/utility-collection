@@ -1,0 +1,72 @@
+{
+	"name": "utility-collection",
+	"version": "1.8.7",
+	"description": "Utility collection to help with the everyday front-end job.",
+	"main": "lib/main",
+	"types": "@types/main",
+	"scripts": {
+		"test": "jest",
+		"preversion": "npm test",
+		"remove-version": "npm run build && git add -A",
+		"remove-postversion": "git push && git push --tags",
+		"dev": "npm run clean && tsc -w",
+		"build": "npm run clean && tsc && exit 0",
+		"clean": "rm -rf ./lib/* ./dist/* ./@types/* && exit 0",
+		"deploy": "git commit -a -m \"release\" && release-it && exit 0"
+	},
+	"babel": {
+		"presets": [
+			"env"
+		]
+	},
+	"jest": {
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest",
+			"^.+\\.jsx?$": "babel-jest"
+		},
+		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json",
+			"node"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dan2dev/utility-collection.git"
+	},
+	"author": {
+		"name": "Dan Castro"
+	},
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/dan2dev/utility-collection/issues"
+	},
+	"homepage": "https://github.com/dan2dev/utility-collection#readme",
+	"devDependencies": {
+		"@types/jest": "^22.0.1",
+		"@types/jquery": "^3.2.18",
+		"@types/jsx-chai": "^3.0.16",
+		"@types/lodash": "^4.14.93",
+		"@types/node": "^9.3.0",
+		"@types/react": "^16.0.34",
+		"@types/react-dom": "^16.0.3",
+		"@types/window-or-global": "^1.0.0",
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.26.0",
+		"babel-jest": "^22.1.0",
+		"babel-preset-env": "^1.6.1",
+		"jest": "^22.1.4",
+		"regenerator-runtime": "^0.11.1",
+		"ts-jest": "^22.0.1",
+		"typescript": "^2.6.2"
+	},
+	"dependencies": {
+		"moment": "^2.20.1"
+	},
+	"readme": "ERROR: No README data found!",
+	"_id": "utility-collection@"
+}
