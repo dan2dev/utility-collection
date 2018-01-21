@@ -7,3 +7,4 @@ export * from "./list";
 export * from "./scroll-switch";
 export * from "./event";
 // export * from "./mask-simple"; // migrate to mother-mask
+console.log("ok1");
