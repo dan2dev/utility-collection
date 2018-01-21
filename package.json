@@ -7,9 +7,10 @@
 	"scripts": {
 		"test": "jest",
 		"dev": "npm run clean && (tsc -w | webpack -w  --progress --color)",
-		"build": "npm run clean && tsc && webpack -p --env.platform=web --progress --color && exit 0",
+		"build": "npm run clean && tsc && webpack -p --config=webpack.min.config.js --progress --color && webpack --progress --color && exit 0",
 		"clean": "rm -rf ./lib/* ./dist/* ./@types/* && exit 0",
-		"deploy": "npm run build && git commit -a -m \"release\" && release-it && exit 0"
+		"clean-node": "rm -rf ./lib/* ./dist/* ./@types/* && exit 0",
+		"deploy": "git commit -a -m \"release\" && release-it && exit 0"
 	},
 	"babel": {
 		"presets": [
@@ -36,7 +37,7 @@
 		"url": "git+https://github.com/dan2dev/utility-collection.git"
 	},
 	"author": {
-		"name": "Dan Castro"
+		"name": "Dan C Castro"
 	},
 	"license": "ISC",
 	"bugs": {
