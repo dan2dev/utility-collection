@@ -74,6 +74,7 @@ fastlane/readme.md
 *.userosscache
 *.sln.docstates
 .git/
+.git
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
