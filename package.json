@@ -1,6 +1,6 @@
 {
 	"name": "utility-collection",
-	"version": "1.8.10",
+	"version": "1.8.11",
 	"description": "Utility collection to help with the everyday front-end job.",
 	"main": "lib/main",
 	"types": "@types/main",
