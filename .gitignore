@@ -11,9 +11,7 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-.git
 .git/
-.vscode
 .vscode/
 
 # Build results
@@ -291,3 +289,5 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+/teste.txt
+/zzz
