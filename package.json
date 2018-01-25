@@ -10,7 +10,7 @@
 		"dev": "npm run clean && (tsc -w | webpack --define process.env.NODE_ENV=development --config=webpack.dev.js -w --progress --color)",
 		"build": "npm run clean && tsc && webpack --define process.env.NODE_ENV=development --config=webpack.dev.js --progress --color && webpack --define process.env.NODE_ENV=production --config=webpack.prod.js --progress --color && exit 0",
 		"clean": "rm -rf ./lib/* ./dist/* ./@types/* && exit 0",
-		"clean-node": "rm -rf ./node_modules && exit 0",
+		"clean-node": "rm -rf ./node_modules && rm -rf package-lock.json exit 0",
 		"commit": "git add --all && git commit -a -m \"release\" && exit 0",
 		"deploy": "git clean -i && npm version patch && npm publish && exit 0"
 	},
@@ -25,7 +25,7 @@
 			"^.+\\.tsx?$": "ts-jest",
 			"^.+\\.jsx?$": "babel-jest"
 		},
-		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+		"testRegex": "(/test/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
 		"moduleFileExtensions": [
 			"ts",
 			"tsx",
@@ -49,14 +49,8 @@
 	"homepage": "https://github.com/dan2dev/utility-collection#readme",
 	"devDependencies": {
 		"@types/jest": "^22.1.0",
-		"@types/jquery": "^3.3.0",
-		"@types/jsx-chai": "^3.0.16",
-		"@types/lodash": "^4.14.95",
-		"@types/node": "^9.3.0",
-		"@types/react": "^16.0.34",
-		"@types/react-dom": "^16.0.3",
-		"@types/window-or-global": "^1.0.0",
 		"awesome-typescript-loader": "^3.4.1",
+		"@types/lodash": "^4.14.96",
 		"babel-cli": "^6.26.0",
 		"babel-core": "^6.26.0",
 		"babel-jest": "^22.1.0",
@@ -85,6 +79,11 @@
 		"webpack-merge": "^4.1.1"
 	},
 	"dependencies": {
-		"moment": "^2.20.1"
+		"@types/jsx-chai": "^3.0.16",
+		"@types/node": "^9.3.0",
+		"@types/react": "^16.0.35",
+		"@types/jquery": "^3.3.0",
+		"@types/react-dom": "^16.0.3",
+		"@types/window-or-global": "^1.0.0"
 	}
 }

@@ -53,11 +53,11 @@ export namespace Is {
 		return brazilianPhoneRegex.test(phone);
 	}
 	export function ddmmyyyy(date: string): boolean {
-		throw new Error("need to be implemented");
+		throw new Error("Not implemented.");
 		// return moment(date, "DD/MM/YYYY", true).isValid();
 	}
 	export function mmddyyyy(date: string): boolean {
-		throw new Error("need to be implemented");
+		throw new Error("Not implemented.");
 		// return moment(date, "MM/DD/YYYY", true).isValid();
 	}
 
