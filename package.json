@@ -9,9 +9,9 @@
 		"test": "jest",
 		"dev": "npm run clean && (tsc -w | webpack --config=webpack.dev.js -w --progress --color)",
 		"build": "npm run clean && tsc && webpack --config=webpack.dev.js --progress --color && webpack -p --config=webpack.prod.js --progress --color && exit 0",
-		"clean": "rm -rf ./lib/* ./dist/* ./@types/* && exit 0",
+		"clean": "rm ./package-lock.json && rm -rf ./lib/* ./dist/* ./@types/* && exit 0",
 		"clean-node": "rm -rf ./node_modules && exit 0",
-		"commit": "npm run build && git add --all && git commit -a -m \"release\" && exit 0",
+		"commit": "git add --all && git commit -a -m \"release\" && git rebase -i && exit 0",
 		"deploy": "git clean -i && npm version patch && npm publish && exit 0"
 	},
 	"babel": {
