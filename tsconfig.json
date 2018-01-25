@@ -6,7 +6,7 @@
 		"declarationDir": "./@types",
 		"sourceMap": true,
 		"noImplicitAny": true,
-		"module": "es6",
+		"module": "commonjs",
 		"target": "es6",
 		"moduleResolution": "node",
 		"skipLibCheck": true,

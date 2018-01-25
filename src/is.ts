@@ -1,4 +1,4 @@
-import moment from "moment";
+// import moment from "moment";
 import String from "./string";
 
 // console.log("--> ok");
@@ -53,10 +53,12 @@ export namespace Is {
 		return brazilianPhoneRegex.test(phone);
 	}
 	export function ddmmyyyy(date: string): boolean {
-		return moment(date, "DD/MM/YYYY", true).isValid();
+		throw new Error("need to be implemented");
+		// return moment(date, "DD/MM/YYYY", true).isValid();
 	}
 	export function mmddyyyy(date: string): boolean {
-		return moment(date, "MM/DD/YYYY", true).isValid();
+		throw new Error("need to be implemented");
+		// return moment(date, "MM/DD/YYYY", true).isValid();
 	}
 
 	// CPF
