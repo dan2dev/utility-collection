@@ -1,21 +1,11 @@
-import { Dom } from "./dom";
-import { Is } from "./is";
-import { String } from "./string";
-import { Reflection } from "./reflection";
-import { Url } from "./url";
-import { List } from "./list";
-import { ScrollSwitch } from "./scroll-switch";
-import { Event } from "./event";
-
-exports.Dom = Dom;
-exports.Is = Is;
-exports.String = String;
-exports.Reflection = Reflection;
-exports.Url = Url;
-exports.List = List;
-exports.ScrollSwitch = ScrollSwitch;
-exports.Event = Event;
-
+export * from "./dom";
+export * from "./is";
+export * from "./string";
+export * from "./reflection";
+export * from "./url";
+export * from "./list";
+export * from "./scroll-switch";
+export * from "./event";
 export namespace UtilityCollection {
 	const name: string = "UtilityCollection";
 }
