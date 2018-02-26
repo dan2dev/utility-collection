@@ -6,6 +6,25 @@ export namespace Event {
 		};
 		target.addEventListener(type, fn);
 	}
+	export function onceOutside(target: Node, type: string, listener: (event: EventListenerOrEventListenerObject) => void) {
+		const fn = (ev: any) => {
+			const inside = target.contains(ev.target);
+			if (!inside) {
+				listener(ev);
+				document.removeEventListener(type, fn);
+			}
+		};
+		document.addEventListener(type, fn);
+	}
+	export function bindOutside(target: Node, type: string, listener: (event: EventListenerOrEventListenerObject) => void) {
+		const fn = (ev: any) => {
+			const inside = target.contains(ev.target);
+			if (!inside) {
+				listener(ev);
+			}
+		};
+		document.addEventListener(type, fn);
+	}
 	export function bind(target: Node, type: string, listener: (event: EventListenerOrEventListenerObject) => void) {
 		const fn = (ev: any) => {
 			listener(ev);
