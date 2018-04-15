@@ -30,7 +30,7 @@ export namespace Dom {
 	}
 	// atributes  ---------------------------------------------
 	export function getAttributes(element: Element | Node): { [key: string]: string; } {
-		const attrs = element.attributes;
+		const attrs = (element as HTMLElement).attributes;
 		const newAttr: { [key: string]: string; } = {};
 		for (let i = 0; i < attrs.length; i++) {
 			newAttr[attrs[i].name] = attrs[i].value;
@@ -107,7 +107,7 @@ export namespace Dom {
 	// dom --------------------------
 	export function attribute(element: Element | HTMLElement | Node, each: (key: string, value: string) => void): void {
 		// TODO: this still need to be tested
-		const attributes = element.attributes;
+		const attributes = (element as HTMLElement).attributes;
 		for (let i = 0; i < attributes.length; i++) {
 			each(attributes[i].name, attributes[i].value);
 		}
