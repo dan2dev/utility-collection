@@ -2,7 +2,7 @@ export declare namespace Dom {
     function insertBefore(element: Node, targetElement: Node): void;
     function insertAfter(element: Node, targetElement: Node): void;
     function remove(element: Node): void;
-    function htmlToNode(html: string | Element): Node;
+    function htmlToNode(html: string | Element): Node | null;
     function htmlToElement(html: string | Element): HTMLElement;
     function getAttributes(element: Element | Node): {
         [key: string]: string;
@@ -13,10 +13,10 @@ export declare namespace Dom {
     function elementDown(node: Element, each: (node: Element, parent?: Element) => void | boolean): void;
     function childElementDown(node: Element, each: (node: HTMLElement, parent?: HTMLElement) => void | boolean): void;
     function elementUp(node: Element | HTMLElement, each: (node: Element | HTMLElement) => boolean | void): void;
-    function parentElementUp(node: Element | HTMLElement | Node, each: (node: Element | HTMLElement | Node) => boolean | void): void;
+    function parentElementUp(node: Element | HTMLElement | Node, each: (node: Element | HTMLElement | Node | null) => boolean | void): void;
     function attribute(element: Element | HTMLElement | Node, each: (key: string, value: string) => void): void;
-    function findNextSibling(target: Node | Node, validation: (node: Node | Node) => boolean | void): Node | Node;
-    function findPrevSibling(target: Node | Node, validation: (node: Node | Node) => boolean | void): Node | Node;
+    function findNextSibling(target: Node | Node, validation: (node: Node | Node) => boolean | void): Node | Node | null;
+    function findPrevSibling(target: Node | Node, validation: (node: Node | Node) => boolean | void): Node | Node | null;
     function findAllSiblings(target: Node): Node[];
     function prependChild(parent: HTMLElement, child: HTMLElement): void;
     function appendChild(parent: HTMLElement, child: HTMLElement): void;

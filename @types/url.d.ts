@@ -1,6 +1,6 @@
 export declare class Url {
-    QueryList?: {
-        [key: string]: string;
+    QueryList: {
+        [key: string]: string | undefined;
     };
     private staticPath?;
     private staticQuery?;
@@ -13,7 +13,7 @@ export declare class Url {
         [key: string]: any;
     }): Url;
     deleteQuery(key: string): Url;
-    getQuery(key: string): string;
+    getQuery(key: string): string | undefined;
     toString(): string;
     setOrigin(origin?: string, justLocal?: boolean): void;
 }
@@ -22,6 +22,6 @@ export declare namespace Url {
         origin: string | null;
         path: string;
     };
-    function absolute(relative: string, base: string): string;
+    function absolute(relative: string, base: string | null): string;
 }
 export default Url;

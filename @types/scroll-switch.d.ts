@@ -8,7 +8,7 @@ export declare namespace ScrollSwitch {
         private frozen;
         private unfreezing;
         constructor(element: HTMLElement);
-        getId(): string;
+        getId(): string | null;
         unfreeze(): void;
         freeze(): void;
     }
