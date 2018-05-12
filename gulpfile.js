@@ -9,7 +9,7 @@ var
   rename = require('gulp-rename'),
   uglify = require('gulp-uglify'),
   minify = require('gulp-minify'),
-  pump = require('pump'),
+  // pump = require('pump'),
   runSequence = require('run-sequence'),
   del = require('del'),
   merge = require('merge2');

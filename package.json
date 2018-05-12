@@ -12,7 +12,7 @@
 		"tsc-w": "tsc -w && exit 0",
 		"build": "yarn run clean && tsc && exit 0",
 		"clean": "rimraf lib/* dist/* @types/* && exit 0",
-		"clean-node": "rimraf package-lock.json node_modules/* && exit 0"
+		"clean-node": "rimraf ./yarn.lock ./package-lock.json ./node_modules/* && exit 0"
 	},
 	"jest": {
 		"transform": {

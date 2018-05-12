@@ -10,3 +10,5 @@ export namespace UtilityCollection {
   const name: string = "UtilityCollection";
 }
 export default UtilityCollection;
+
+console.log("util 654321");
