@@ -49,7 +49,6 @@
       "@types/jsx-chai",
       "@types/jquery",
       "@types/lodash",
-      "@types/jest"
     ]
   },
   "compileOnSave": true,
