@@ -1,4 +1,16 @@
 export namespace Dom {
+  export function joinClass(classNames: Array<string | undefined | null> | string): string {
+    if (typeof classNames === "string") {
+      return this.joinClass([classNames]);
+    } else {
+      const mapped = classNames.map((value) => {
+        if (value !== null && value !== undefined) {
+          return value;
+        }
+      });
+      return mapped.join(" ");
+    }
+  }
   export function insertBefore(element: Node, targetElement: Node): void {
     targetElement.parentElement!.insertBefore(element, targetElement);
   }

@@ -1,4 +1,5 @@
 export declare namespace Dom {
+    function joinClass(classNames: Array<string | undefined | null> | string): string;
     function insertBefore(element: Node, targetElement: Node): void;
     function insertAfter(element: Node, targetElement: Node): void;
     function remove(element: Node): void;
