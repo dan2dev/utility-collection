@@ -1,10 +1,10 @@
 {
 	"private": false,
 	"name": "utility-collection",
-	"version": "2.2.9",
+	"version": "2.2.10",
 	"description": "",
 	"main": "lib/main",
-	"types": "@types/main",
+	"types": "lib/main",
 	"scripts": {
 		"test": "jest --no-cache",
 		"dev": "npm-run-all --parallel tsc && exit 0",
