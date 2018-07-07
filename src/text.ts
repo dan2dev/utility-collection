@@ -1,5 +1,3 @@
-import { Is } from "./is";
-
 export namespace Text {
   export function replaceAll(value: string, search: string, replacement: string) {
     return value.split(search).join(replacement);
@@ -15,7 +13,7 @@ export namespace Text {
   const accents = "ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž";
   const accentsOut = "AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz";
   export function removeAccents(value: string) {
-    if (Is.empty(value)) {
+    if (value === undefined || value === null || value === "" || value === " ") {
       return value;
     }
     const strAccents = value.split("");
